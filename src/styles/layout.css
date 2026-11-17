@@ -665,6 +665,116 @@
   color: var(--text-secondary);
 }
 
+/* FORMACIÓN Y CERTIFICACIONES */
+.cert-ledger {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  gap: 1.5rem 2.5rem;
+  padding-block: 1.65rem;
+  border-top: 1px solid var(--border-subtle);
+  align-items: start;
+}
+
+.cert-issuer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+}
+
+.cert-issued {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.cert-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.cert-skills {
+  margin-top: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.cert-skills-label {
+  color: var(--text-muted);
+}
+
+.cert-credential-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cert-credential-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.cert-credential-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.cert-credential-code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  word-break: break-all;
+  text-align: right;
+}
+
+.cert-verified-note {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* BOTÓN EXPANDIR SECCIÓN (VER COMPLETO / MOSTRAR MENOS) */
+.section-expand-bar {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.section-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding: 0.65rem 1.15rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.section-expand-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* FOOTER */
 .site-footer {
   margin-top: auto;
@@ -770,14 +880,22 @@
     gap: 1.25rem;
   }
 
-  .journey-row {
+  .journey-row,
+  .cert-row {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
-  .journey-links-col {
+  .journey-links-col,
+  .cert-credential-col,
+  .cert-credential-box {
     flex-direction: row;
     align-items: center;
-    gap: 1.25rem;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .cert-credential-code {
+    text-align: left;
   }
 }

@@ -1,0 +1,88 @@
+/**
+ * FORMACIÓN CONTINUA Y CERTIFICACIONES (Ordenadas desde la más reciente)
+ */
+export const certificationsList = [
+  {
+    id: 'edteam-estado-react',
+    title: 'Control del estado y los datos en React',
+    issuer: 'EDteam',
+    issuedAt: 'Expedición: nov. de 2025',
+    credentialId: null,
+    skills: ['React.js'],
+  },
+  {
+    id: 'edteam-typescript',
+    title: 'TypeScript desde 0',
+    issuer: 'EDteam',
+    issuedAt: 'Expedición: sept. de 2025',
+    credentialId: null,
+    skills: ['TypeScript'],
+  },
+  {
+    id: 'edteam-react',
+    title: 'React desde 0',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '1595953373-9a40e641-7660-4b4b-b8f5-da0360634797',
+    skills: ['React.js'],
+  },
+  {
+    id: 'edteam-js-dom',
+    title: 'Manejo del DOM con JavaScript',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '1595954198-001d2f2-5fcf-459b-8d44-3e74a6e2481b',
+    skills: ['Manejo del DOM', 'JavaScript'],
+  },
+  {
+    id: 'edteam-js-poo',
+    title: 'Programación orientada a objetos con JavaScript',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '159595213-0759d3ef-e759-4af4-81cb-22018ef60c72',
+    skills: [
+      'Programación orientada a objetos (POO)',
+      'Modelo de objetos de JavaScript (JSOM)',
+    ],
+  },
+  {
+    id: 'edteam-git',
+    title: 'Git desde 0',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '1595954792-94b837a1-224e-4d9b-b981-72f2fb7795e1',
+    skills: ['Git', 'GitHub'],
+  },
+  {
+    id: 'edteam-js',
+    title: 'JavaScript desde 0',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '159595377-ecfe5c95-4a38-40a2-8d98-31493415374f',
+    skills: ['JavaScript'],
+  },
+  {
+    id: 'edteam-css',
+    title: 'CSS desde 0',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '15959542-6d017376-8ccf-4d24-927f-601631c97091',
+    skills: ['Hojas de estilos en cascada (CSS)'],
+  },
+  {
+    id: 'edteam-html',
+    title: 'HTML desde 0',
+    issuer: 'EDteam',
+    issuedAt: 'Certificación verificada',
+    credentialId: '1595955122-517a6729-5408-42b1-b451-0b032d31f8b3',
+    skills: ['HTML5'],
+  },
+  {
+    id: 'urbe-js',
+    title: 'JavaScript',
+    issuer: 'Universidad Rafael Belloso Chacín (URBE)',
+    issuedAt: 'Certificación universitaria',
+    credentialId: 'CJSA193289',
+    skills: ['JavaScript'],
+  },
+]
