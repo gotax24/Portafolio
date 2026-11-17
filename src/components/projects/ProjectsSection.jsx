@@ -2,8 +2,11 @@ import { useCallback, useMemo, useState, useTransition } from 'react'
 import { ProjectFilterBar } from '@/components/projects/ProjectFilterBar'
 import { ProjectRow } from '@/components/projects/ProjectRow'
 import { ProjectsFilterContext } from '@/components/projects/projectsFilterContextObject'
+import { SectionExpandButton } from '@/components/ui/SectionExpandButton'
 import { featuredProjects, projectFilterTabs } from '@/data/projectsData'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
+
+const INITIAL_VISIBLE = 3
 
 function filterProjectsList(projects, filterId) {
   if (filterId === 'production') {
@@ -23,20 +26,36 @@ function filterProjectsList(projects, filterId) {
 
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('all')
+  const [isExpanded, setIsExpanded] = useState(false)
   const [isPending, startTransition] = useTransition()
 
   const selectFilter = useCallback((nextFilter) => {
     startTransition(() => {
       setActiveFilter(nextFilter)
+      setIsExpanded(false)
     })
   }, [])
 
-  const visibleProjects = useMemo(
+  const toggleExpand = useCallback(() => {
+    startTransition(() => {
+      setIsExpanded((prev) => !prev)
+    })
+  }, [])
+
+  const filteredProjects = useMemo(
     () => filterProjectsList(featuredProjects, activeFilter),
     [activeFilter],
   )
 
-  useScrollReveal(activeFilter)
+  const visibleProjects = useMemo(
+    () =>
+      isExpanded
+        ? filteredProjects
+        : filteredProjects.slice(0, INITIAL_VISIBLE),
+    [filteredProjects, isExpanded],
+  )
+
+  useScrollReveal(`${activeFilter}-${isExpanded ? 'all' : 'top3'}`)
 
   const contextValue = useMemo(
     () => ({
@@ -76,11 +95,20 @@ export function ProjectsSection() {
           <ProjectFilterBar />
         </div>
 
-        <div className="projects-ledger" aria-live="polite">
+        <div id="projects-ledger-list" className="projects-ledger" aria-live="polite">
           {visibleProjects.map((project) => (
             <ProjectRow key={project.id} project={project} />
           ))}
         </div>
+
+        <SectionExpandButton
+          isExpanded={isExpanded}
+          totalCount={filteredProjects.length}
+          initialCount={INITIAL_VISIBLE}
+          expandText="Ver todos los proyectos"
+          controlsId="projects-ledger-list"
+          onToggle={toggleExpand}
+        />
       </section>
     </ProjectsFilterContext>
   )

@@ -1,6 +1,11 @@
+import { useState, useTransition } from 'react'
 import { TimelineItem } from '@/components/experience/TimelineItem'
+import { SectionExpandButton } from '@/components/ui/SectionExpandButton'
 import { experienceTimeline } from '@/data/experienceData'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { useTimelineProgress } from '@/hooks/useTimelineProgress'
+
+const INITIAL_VISIBLE = 3
 
 function TimelineTrack({ ref, children }) {
   return (
@@ -14,7 +19,21 @@ function TimelineTrack({ ref, children }) {
 }
 
 export function ExperienceSection() {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [, startTransition] = useTransition()
   const timelineRef = useTimelineProgress()
+
+  const handleToggle = () => {
+    startTransition(() => {
+      setIsExpanded((prev) => !prev)
+    })
+  }
+
+  const visibleExperience = isExpanded
+    ? experienceTimeline
+    : experienceTimeline.slice(0, INITIAL_VISIBLE)
+
+  useScrollReveal(isExpanded ? 'exp-expanded' : 'exp-collapsed')
 
   return (
     <section
@@ -28,19 +47,29 @@ export function ExperienceSection() {
             Trayectoria Laboral
           </h2>
           <p className="section-subtitle">
-            Mi recorrido profesional completo en LinkedIn: desde atención al cliente, inventario
-            físico e instalación técnica hasta Analista de TI y Desarrollador Full Stack.
+            Iniciando por mi cargo actual como Analista de TI y Desarrollador Full Stack en
+            CEVAZ hasta mis inicios en atención al cliente, inventario físico e instalación
+            técnica.
           </p>
         </div>
       </div>
 
       <TimelineTrack ref={timelineRef}>
-        <div className="timeline-list">
-          {experienceTimeline.map((job) => (
+        <div id="experience-timeline-list" className="timeline-list" aria-live="polite">
+          {visibleExperience.map((job) => (
             <TimelineItem key={job.id} job={job} />
           ))}
         </div>
       </TimelineTrack>
+
+      <SectionExpandButton
+        isExpanded={isExpanded}
+        totalCount={experienceTimeline.length}
+        initialCount={INITIAL_VISIBLE}
+        expandText="Ver trayectoria laboral completa"
+        controlsId="experience-timeline-list"
+        onToggle={handleToggle}
+      />
     </section>
   )
 }

@@ -1,3 +1,4 @@
+import { CertificationsSection } from '@/components/certifications/CertificationsSection'
 import { ExperienceSection } from '@/components/experience/ExperienceSection'
 import { HeroSection } from '@/components/hero/HeroSection'
 import { CodeJourneySection } from '@/components/journey/CodeJourneySection'
@@ -19,8 +20,9 @@ export function App() {
           <HeroSection />
         </div>
         <ProjectsSection />
-        <CodeJourneySection />
         <ExperienceSection />
+        <CodeJourneySection />
+        <CertificationsSection />
       </main>
       <Footer />
     </div>

@@ -15,8 +15,9 @@ export function Header() {
 
         <nav className="site-nav" aria-label="Navegación principal">
           <a href="#proyectos">Proyectos</a>
+          <a href="#experiencia">Experiencia</a>
           <a href="#trayecto-codigo">El Trayecto</a>
-          <a href="#experiencia">Carrera Laboral</a>
+          <a href="#certificaciones">Cursos</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
