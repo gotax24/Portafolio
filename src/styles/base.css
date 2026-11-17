@@ -108,7 +108,8 @@ footer[id] {
 }
 
 /* Hardware-accelerated SVG wrapper */
-.icon-wrapper {
+.icon-wrapper,
+.chevron-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -117,6 +118,10 @@ footer[id] {
 
 a:hover .icon-wrapper {
   transform: translate(2px, -2px);
+}
+
+.chevron-wrapper.is-rotated {
+  transform: rotate(180deg);
 }
 
 .mono-detail {

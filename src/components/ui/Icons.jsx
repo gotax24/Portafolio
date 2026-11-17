@@ -1,9 +1,29 @@
+import { clsx } from 'clsx'
+
 export function ArrowUpRightIcon() {
   return (
     <span className="icon-wrapper" aria-hidden="true">
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
         <path
           d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="square"
+        />
+      </svg>
+    </span>
+  )
+}
+
+export function ChevronDownIcon({ isRotated = false }) {
+  return (
+    <span
+      className={clsx('chevron-wrapper', isRotated && 'is-rotated')}
+      aria-hidden="true"
+    >
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path
+          d="M3.5 6L8 10.5L12.5 6"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="square"
