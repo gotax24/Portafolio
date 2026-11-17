@@ -4,25 +4,108 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gotax.dev/" />
+
+    <title>Ernesto Bracho R. — Analista de TI & Desarrollador Full Stack | gotax.dev</title>
     <meta
       name="description"
-      content="Ernesto Bracho R. (gotax.dev) — Ingeniero en Computación, Analista de TI y Desarrollador Full Stack en Maracaibo, Venezuela. Proyectos públicos, sistemas institucionales y trayectoria."
+      content="Portafolio de Ernesto Bracho R. (gotax.dev) — Ingeniero en Computación, Analista de TI y Desarrollador Full Stack en Maracaibo, Venezuela. Sistemas institucionales, aplicaciones web y trayectoria profesional."
     />
     <meta name="theme-color" content="#0b0c0e" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="es_VE" />
+    <meta property="og:url" content="https://gotax.dev/" />
+    <meta
+      property="og:title"
+      content="Ernesto Bracho R. — Analista de TI & Desarrollador Full Stack | gotax.dev"
+    />
+    <meta
+      property="og:description"
+      content="Ingeniero en Computación (URBE), Analista de TI y Desarrollador Full Stack. Explora mis proyectos públicos, sistemas privados y trayectoria laboral."
+    />
+    <meta property="og:image" content="https://gotax.dev/perfil-profesional.webp" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Ernesto Bracho R. — Analista de TI & Desarrollador Full Stack | gotax.dev"
+    />
+    <meta
+      name="twitter:description"
+      content="Proyectos Full Stack, arquitectura de sistemas e historia profesional de Ernesto Bracho R."
+    />
+    <meta name="twitter:image" content="https://gotax.dev/perfil-profesional.webp" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Ernesto Bracho R. — Analista de TI & Desarrollador Full Stack | gotax.dev</title>
+
+    <!-- Pre-hydration synchronous accent loader to prevent flash -->
+    <script>
+      ;(function () {
+        try {
+          var raw = window.localStorage.getItem('gotax:theme:v1')
+          if (!raw) return
+          var parsed = JSON.parse(raw)
+          if (parsed && parsed.value && parsed.muted) {
+            document.documentElement.style.setProperty('--accent', parsed.value)
+            document.documentElement.style.setProperty('--accent-muted', parsed.muted)
+          }
+        } catch (err) {}
+      })()
+    </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://gotax.dev/",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Ernesto Bracho R.",
+          "alternateName": "gotax24",
+          "jobTitle": "Analista de TI & Desarrollador Full Stack",
+          "email": "mailto:ernesto@gotax.dev",
+          "url": "https://gotax.dev/",
+          "image": "https://gotax.dev/perfil-profesional.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maracaibo",
+            "addressRegion": "Zulia",
+            "addressCountry": "VE"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Privada Dr. Rafael Belloso Chacín (URBE)"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Centro Venezolano Americano del Zulia (CEVAZ)"
+          },
+          "sameAs": [
+            "https://github.com/gotax24",
+            "https://www.linkedin.com/in/ernesto-bracho/",
+            "https://www.instagram.com/gotax.dev/"
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <!--
       THESIS: Un dossier editorial nocturno de ingeniería que presenta la evolución real de Ernesto Bracho desde operaciones, inventario físico y atención al cliente hasta arquitectura Full Stack e infraestructura TI, rechazando cuadrículas de tarjetas idénticas y badges genéricos de IA.
       OWN-WORLD: Superficie carbón profundo (#0B0C0E) y pizarra (#111318), trazos estructurales de 1px (#1E222B), tipografía editorial Schibsted Grotesk + Public Sans + Azeret Mono para fechas tabulares, y acento dinámico configurable en vivo.
       STORY: El visitante comprende en segundos quién es Ernesto, explora sus sistemas en producción y privados mediante fichas de Desafío y Solución, recorre su línea de tiempo laboral (2021–Actualidad) y su archivo cronológico desde su primera app (notitas, 2024).
-      FIRST VIEWPORT: Cabecera fija minimalista con selector de color de acento, seguida de una composición asimétrica con retrato editorial, titular directo de rol e ingeniería, resumen honesto y enlaces directos a LinkedIn, GitHub, Instagram y Email.
+      FIRST VIEWPORT: Cabecera fija minimalista con selector de color de acento, seguida de una composición asimétrica con retrato editorial, titular directo de rol e ingeniería, resumen honesto y enlaces directos a LinkedIn, GitHub, Instagram y Email (ernesto@gotax.dev).
       FORM: Nocturnal Engineering Monograph, candidate 4 on grounded list, seed key 71e1caaa.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
     -->
