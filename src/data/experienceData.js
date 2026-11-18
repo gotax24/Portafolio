@@ -13,9 +13,9 @@ export const experienceTimeline = [
     summary:
       "Responsable del desarrollo y modernización de los sistemas internos de la institución y de la operatividad tecnológica general, ejecutando con alta autonomía proyectos web de punta a punta y administrando la infraestructura TI.",
     highlights: [
-      "Modernización de Backend (cevaz-rm): Refactoricé un backend legado de +4.000 líneas en TypeScript/Node.js hacia una arquitectura API modular (rutas, controladores y servicios), optimizando consultas SQL y mitigando cold starts en PostgreSQL (Neon).",
-      "Reingeniería de Sistemas Legados (ICEVAZ): Reconstruí desde cero en 6 meses el sistema de inventario institucional hacia una arquitectura MVC limpia (PHP / SQL Server), integrando etiquetado QR, jerarquías multi-sede, control de transferencias y logs de auditoría.",
       "Desarrollo de Plataformas en Producción (Eventos CEVAZ): Diseñé y desplegué en 2 meses el portal automatizado de eventos (PHP / MySQL / MVC) con control de roles en BD, validación de conflictos de horario/espacio, seguridad (rate limiting y CAPTCHA) y reportes estadísticos, iterando sobre +30 requerimientos internos.",
+      "Reingeniería de Sistemas Legados (ICEVAZ): Reconstruí desde cero en 6 meses el sistema de inventario institucional hacia una arquitectura MVC limpia (PHP / SQL Server), integrando etiquetado QR, jerarquías multi-sede, control de transferencias y logs de auditoría.",
+      "Modernización de Backend (cevaz-rm): Refactoricé un backend legado de +4.000 líneas en TypeScript/Node.js hacia una arquitectura API modular (rutas, controladores y servicios), optimizando consultas SQL y mitigando cold starts en PostgreSQL (Neon).",
       "Desarrollo de Sistema Bibliotecario: Actualmente construyo la plataforma cliente-servidor para el catálogo bibliográfico y control de préstamos internos, estandarizando buenas prácticas en PHP con miras a su migración a Laravel.",
       "Gestión de Infraestructura: Brindo soporte técnico preventivo y correctivo a +120 estaciones de trabajo (Ubuntu y Windows), mantengo bases de datos y administro servidores locales y sistemas de videovigilancia (CCTV).",
     ],

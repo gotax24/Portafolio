@@ -31,7 +31,7 @@ export function CodeJourneySection() {
       <div className="section-header-split" data-reveal>
         <div className="section-heading-group">
           <h2 id="journey-heading" className="section-title">
-            El Trayecto en Código
+            Trayecto en Código
           </h2>
           <p className="section-subtitle">
             Ordenado desde mis prácticas más recientes en React y PHP hacia atrás, hasta llegar

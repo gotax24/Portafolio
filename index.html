@@ -40,28 +40,36 @@
     />
     <meta name="twitter:image" content="https://gotax.dev/perfil-profesional.webp" />
 
-    <!-- Fonts -->
+    <!-- Preload critical LCP portrait image (responsive) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/perfil-profesional.webp"
+      imagesrcset="/perfil-profesional-192w.webp 192w, /perfil-profesional-384w.webp 384w, /perfil-profesional.webp 514w"
+      imagesizes="(max-width: 920px) 96px, 236px"
+      fetchpriority="high"
+    />
+
+    <!-- Fonts (Non-blocking load to eliminate 880ms render-blocking latency) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@600;700&display=swap"
     />
-
-    <!-- Pre-hydration synchronous accent loader to prevent flash -->
-    <script>
-      ;(function () {
-        try {
-          var raw = window.localStorage.getItem('gotax:theme:v1')
-          if (!raw) return
-          var parsed = JSON.parse(raw)
-          if (parsed && parsed.value && parsed.muted) {
-            document.documentElement.style.setProperty('--accent', parsed.value)
-            document.documentElement.style.setProperty('--accent-muted', parsed.muted)
-          }
-        } catch (err) {}
-      })()
-    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">

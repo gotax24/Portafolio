@@ -37,36 +37,3 @@ export const profileData = {
     },
   ],
 };
-
-export const accentOptions = [
-  {
-    id: "steel",
-    name: "Acero",
-    value: "#7aa2f7",
-    muted: "rgba(122, 162, 247, 0.14)",
-  },
-  {
-    id: "emerald",
-    name: "Esmeralda",
-    value: "#4fd6be",
-    muted: "rgba(79, 214, 190, 0.14)",
-  },
-  {
-    id: "amber",
-    name: "Ámbar",
-    value: "#e0af68",
-    muted: "rgba(224, 175, 104, 0.14)",
-  },
-  {
-    id: "copper",
-    name: "Cobre",
-    value: "#f0886c",
-    muted: "rgba(240, 136, 108, 0.14)",
-  },
-  {
-    id: "mono",
-    name: "Monocromo",
-    value: "#e6e8ec",
-    muted: "rgba(230, 232, 236, 0.12)",
-  },
-];

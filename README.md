@@ -14,26 +14,24 @@ src/
 │   │   ├── ExperienceSection.jsx     # Línea de tiempo laboral con progreso de scroll
 │   │   └── TimelineItem.jsx          # Nodo individual de experiencia (LinkedIn 2021–Actualidad)
 │   ├── hero/
-│   │   ├── HeroSection.jsx           # Retrato, presentación y enlaces directos
+│   │   ├── HeroSection.jsx           # Retrato con skeleton shimmer, presentación y enlaces
 │   │   └── TechStackBar.jsx          # Cinta corredora infinita (marquee) del stack principal
 │   ├── journey/
 │   │   ├── CodeJourneySection.jsx    # Evolución desde el primer repositorio (notitas, 2024)
 │   │   └── JourneyItem.jsx           # Fila de repositorio del trayecto
 │   ├── layout/
-│   │   ├── Header.jsx                # Cabecera fija con navegación y selector de acento
+│   │   ├── Header.jsx                # Cabecera fija con navegación responsiva
 │   │   └── Footer.jsx                # Contacto directo (ernesto@gotax.dev) y redes
 │   ├── projects/
 │   │   ├── ProjectsSection.jsx       # Compound Component con React 19 Context + useTransition
 │   │   ├── ProjectFilterBar.jsx      # Barra de filtros accesible (role="tablist")
-│   │   └── ProjectRow.jsx            # Ficha técnica con El Desafío / Cómo lo hice
+│   │   ├── ProjectRow.jsx            # Ficha técnica con El Desafío / Cómo lo hice
+│   │   └── ProjectRowSkeleton.jsx    # Skeleton shimmer al filtrar categorías
 │   └── ui/
-│       ├── AccentSwitcher.jsx        # Selector de color de acento en vivo
 │       ├── Icons.jsx                 # Iconografía SVG de interfaz y redes
 │       ├── SectionExpandButton.jsx   # Botón reutilizable Ver completo / Mostrar menos
 │       ├── SkipLink.jsx              # Accesibilidad por teclado (WCAG 2.4.1)
 │       └── TechIcons.jsx             # Iconografía SVG técnica del stack
-├── context/
-│   └── ThemeContext.jsx              # Estado de tema/acento con API use() de React 19
 ├── data/
 │   ├── certificationsData.js         # Certificaciones de EDteam y URBE
 │   ├── experienceData.js             # Historial laboral completo

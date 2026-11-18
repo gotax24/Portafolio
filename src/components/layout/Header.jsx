@@ -1,4 +1,3 @@
-import { AccentSwitcher } from '@/components/ui/AccentSwitcher'
 import { profileData } from '@/data/profileData'
 
 export function Header() {
@@ -16,12 +15,10 @@ export function Header() {
         <nav className="site-nav" aria-label="Navegación principal">
           <a href="#proyectos">Proyectos</a>
           <a href="#experiencia">Experiencia</a>
-          <a href="#trayecto-codigo">El Trayecto</a>
+          <a href="#trayecto-codigo">Trayecto</a>
           <a href="#certificaciones">Cursos</a>
           <a href="#contacto">Contacto</a>
         </nav>
-
-        <AccentSwitcher />
       </div>
     </header>
   )

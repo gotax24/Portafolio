@@ -28,43 +28,47 @@ export function ProjectRow({ project }) {
   return (
     <article className="project-row" data-reveal>
       <aside className="project-meta" aria-label={`Ficha técnica de ${project.name}`}>
-        <div className="project-period">{project.period}</div>
-        <div className="project-context">{project.context}</div>
+        <div className="project-meta-header">
+          <div className="project-period">{project.period}</div>
+          <div className="project-context">{project.context}</div>
+        </div>
 
-        <dl className="project-specs">
-          <div className="spec-line">
-            <dt>Acceso</dt>
-            <dd>{project.visibility}</dd>
-          </div>
-          <div className="spec-line">
-            <dt>Estado</dt>
-            <dd className="spec-status">{project.statusLabel}</dd>
-          </div>
-          <div className="spec-line">
-            <dt>Stack</dt>
-            <dd>{project.stack}</dd>
-          </div>
-        </dl>
+        <div className="project-meta-footer">
+          <dl className="project-specs">
+            <div className="spec-line">
+              <dt>Acceso</dt>
+              <dd>{project.visibility}</dd>
+            </div>
+            <div className="spec-line">
+              <dt>Estado</dt>
+              <dd className="spec-status">{project.statusLabel}</dd>
+            </div>
+            <div className="spec-line">
+              <dt>Stack</dt>
+              <dd>{project.stack}</dd>
+            </div>
+          </dl>
 
-        <div className="project-actions">
-          {project.liveUrl ? (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="action-link"
-              aria-label={`Abrir sitio en vivo de ${project.name}`}
-            >
-              <span>Abrir aplicación</span>
-              <ArrowUpRightIcon />
-            </a>
-          ) : null}
+          <div className="project-actions">
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="action-link"
+                aria-label={`Abrir sitio en vivo de ${project.name}`}
+              >
+                <span>Abrir aplicación</span>
+                <ArrowUpRightIcon />
+              </a>
+            ) : null}
 
-          {project.repoUrl ? (
-            <PublicRepoAction url={project.repoUrl} projectName={project.name} />
-          ) : (
-            <PrivateRepoNotice />
-          )}
+            {project.repoUrl ? (
+              <PublicRepoAction url={project.repoUrl} projectName={project.name} />
+            ) : (
+              <PrivateRepoNotice />
+            )}
+          </div>
         </div>
       </aside>
 

@@ -20,4 +20,18 @@ export default defineConfig({
   preview: {
     allowedHosts: ['.trycloudflare.com'],
   },
+  build: {
+    rolldownOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+          if (id.includes('/src/data/') || id.includes('/src/components/ui/TechIcons')) {
+            return 'portfolio-data'
+          }
+        },
+      },
+    },
+  },
 })

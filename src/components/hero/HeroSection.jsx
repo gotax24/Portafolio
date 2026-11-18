@@ -5,16 +5,21 @@ export function HeroSection() {
   return (
     <section className="hero-section container" aria-labelledby="hero-heading">
       <div className="hero-grid">
-        <div className="hero-portrait-column" data-reveal>
+        <div className="hero-portrait-column">
           <figure className="portrait-frame">
-            <img
-              src={profileData.photo}
-              alt={`Retrato de ${profileData.name}`}
-              width="260"
-              height="325"
-              fetchPriority="high"
-              className="portrait-image"
-            />
+            <div className="portrait-image-wrapper">
+              <img
+                src={profileData.photo}
+                srcSet="/perfil-profesional-192w.webp 192w, /perfil-profesional-384w.webp 384w, /perfil-profesional.webp 514w"
+                sizes="(max-width: 920px) 96px, 236px"
+                alt={`Retrato de ${profileData.name}`}
+                width="260"
+                height="325"
+                fetchPriority="high"
+                decoding="async"
+                className="portrait-image"
+              />
+            </div>
             <figcaption className="portrait-caption">
               <span>{profileData.location}</span>
               <span className="mono-detail">{profileData.education}</span>
@@ -22,7 +27,7 @@ export function HeroSection() {
           </figure>
         </div>
 
-        <div className="hero-content-column" data-reveal>
+        <div className="hero-content-column">
           <h1 id="hero-heading" className="hero-title">
             {profileData.name}
           </h1>
