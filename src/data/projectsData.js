@@ -47,7 +47,7 @@ export const featuredProjects = [
     name: "Plataforma de Gestión de Eventos CEVAZ",
     context: "Centro Venezolano Americano del Zulia (CEVAZ)",
     period: "2025 – Actualidad",
-    visibility: "Codigo privado · Portal publico",
+    visibility: "Código privado · Portal público",
     isPrivate: true,
     statusCategory: "production",
     statusLabel: "En producción",
@@ -108,11 +108,11 @@ export const featuredProjects = [
     isPrivate: false,
     statusCategory: "development",
     statusLabel: "En pausa (Migrando backend a Node.js)",
-    stack: "React 19 · Express 5 · PostgreSQL · Zustand · JWT & OAuth",
+    stack: "React 19 · Zustand · Stripe · Node.js & PostgreSQL (En migración)",
     summary:
       "Monorepo Full Stack de comercio electrónico con catálogo, carrito, sistema de reseñas, favoritos, autenticación propia y panel de administración.",
     challenge:
-      "Diseñar una plataforma de e-commerce completa y realista con pasarela de pagos (Stripe) para tarjetas, Pago Móvil, Zelle y PayPal ademas de gestión de comentarios, lista de favoritos y panel administrativo, superando las limitaciones de seguridad y persistencia de un entorno simulado.",
+      "Diseñar una plataforma de e-commerce completa y realista con pasarela de pagos (Stripe) para tarjetas, Pago Móvil, Zelle y PayPal además de gestión de comentarios, lista de favoritos y panel administrativo, superando las limitaciones de seguridad y persistencia de un entorno simulado.",
     solution:
       "Inicié el desarrollo del frontend en React apoyándome en json-server para prototipar la interfaz y los flujos de compra. Al abordar la integración real de Stripe y la lógica transaccional, identifiqué la necesidad de construir un backend robusto en lugar de depender de mocks. Decidí pausar estratégicamente el proyecto mientras adquiría experiencia desarrollando sistemas institucionales completos en producción; actualmente preparo la migración de esa lógica hacia Node.js para retomar y desplegar la arquitectura definitiva.",
     liveUrl: null,
