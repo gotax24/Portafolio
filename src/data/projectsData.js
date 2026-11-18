@@ -77,7 +77,7 @@ export const featuredProjects = [
       "Al pedir en un restaurante noté la lentitud del servicio y la fricción causada por menús estáticos en PDF hechos a mano, donde figuraban productos agotados y tanto el comercio como el cliente debían calcular manualmente los montos según la tasa oficial del día. A nivel técnico, el carrito requería actualizaciones frecuentes de estado sin degradar el rendimiento de toda la interfaz.",
     solution:
       "Desarrollé una aplicación frontend que consulta automáticamente la tasa oficial mediante una API externa (DolarApi Venezuela), controla el estado de apertura del local —manteniendo visible el menú y los precios aun cuando está cerrado— y gestiona el carrito de compras con Zustand, sustituyendo React Context para evitar re-renderizados globales al agregar o quitar productos. Integra un formulario dinámico con validaciones condicionales según modalidad (pickup o delivery) que estructura el pedido listo para enviar por WhatsApp. Implementé los datos en Excel para facilitar su operación por personal no técnico; si bien la carga y vinculación de imágenes representó el mayor reto y constituye el punto más frágil del enfoque sin servidor —manejable con una guía clara de uso—, este aprendizaje define la hoja de ruta hacia una versión 3.0 con backend propio, base de datos dedicada y almacenamiento en AWS S3 o Supabase Storage.",
-    liveUrl: "https://marago.vercel.app",
+    liveUrl: "https://marago.gotax.dev",
     repoUrl: null,
   },
   {
@@ -96,7 +96,7 @@ export const featuredProjects = [
       "Partiendo de la base de un proyecto inicial de React, el reto consistió en escalarlo hacia una aplicación completa capaz de consultar datos financieros altamente volátiles desde la API de CoinGecko sin saturar peticiones ni degradar la fluidez de navegación, incorporando además inicio de sesión y persistencia de datos por usuario.",
     solution:
       "Implementé autenticación con proveedores OAuth (Google y GitHub) y persistencia en base de datos mediante Supabase para sincronizar los favoritos de cada cuenta. Optimicé el consumo de CoinGecko con React Query para el manejo de caché en el cliente, gestioné el estado global con Zustand y desarrollé gráficos históricos interactivos con Chart.js.",
-    liveUrl: "https://criptobro.vercel.app",
+    liveUrl: "https://criptobro.gotax.dev",
     repoUrl: "https://github.com/gotax24/criptobro",
   },
   {
