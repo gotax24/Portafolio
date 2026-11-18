@@ -30,7 +30,7 @@ Unlike generic developer portfolios that hide non-tech jobs or early beginner re
 - **No AI badges or cliché pills:** Zero "Available for work" glowing pills, zero skill-icon badge walls, zero nested cards or eyebrow kickers above headings.
 - **Project visibility & status rules:**
   - Private repositories (`cevaz-rm`, `ICEVAZ`, `Eventos CEVAZ`, `Biblioteca CEVAZ`, `Marago`, `Wallex`) must never expose source code links; only public live URLs when available (`https://marago.vercel.app`).
-  - `Yalush`, `Wallex`, and `Biblioteca CEVAZ` must be clearly marked as *En desarrollo*.
+  - `Yalush`, `Wallex`, and `Biblioteca CEVAZ` must be clearly marked as _En desarrollo_.
   - `CDD-Chatbot` is archived and excluded from both the portfolio and the GitHub README.
   - Each featured project includes **El desafío** and **Cómo lo hice** sections with generic placeholder text ready for the user to replace with his own words later.
   - Early learning projects (starting with `notitas` as his first app in Sept 2024, followed by `Ahorcadox`, `Tix`, `Generax`, `PokeYalush`, `Bibliotecox`, `JuegoLaVieja`, `climazaso`, `The-panel-0n`, `web-scrapper-sencillo`, `php-desde-cero`, `curso-react`) are displayed in a dedicated chronological trajectory archive.

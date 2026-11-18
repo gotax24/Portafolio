@@ -13,9 +13,10 @@
   --accent: #7aa2f7;
   --accent-muted: rgba(122, 162, 247, 0.14);
 
-  --font-display: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'Azeret Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display:
+    "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Azeret Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

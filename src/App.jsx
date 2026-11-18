@@ -1,6 +1,7 @@
 import { CertificationsSection } from '@/components/certifications/CertificationsSection'
 import { ExperienceSection } from '@/components/experience/ExperienceSection'
 import { HeroSection } from '@/components/hero/HeroSection'
+import { TechStackBar } from '@/components/hero/TechStackBar'
 import { CodeJourneySection } from '@/components/journey/CodeJourneySection'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
@@ -18,6 +19,7 @@ export function App() {
       <main id="contenido-principal">
         <div id="inicio">
           <HeroSection />
+          <TechStackBar />
         </div>
         <ProjectsSection />
         <ExperienceSection />

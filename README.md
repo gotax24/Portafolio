@@ -1,4 +1,4 @@
-# gotax.dev — Portafolio de Ernesto Bracho R.
+# gotax.dev — Portafolio de Ernesto Bracho R
 
 Portafolio profesional de **Ernesto Bracho R.** (`gotax.dev`), construido con **React 19 (`.jsx`)**, **Vite 8 (Rolldown)** y **CSS nativo modular**.
 
