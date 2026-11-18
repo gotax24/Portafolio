@@ -74,7 +74,7 @@ button {
 
 section[id],
 footer[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 96px;
 }
 
 /* Skip link (WCAG 2.4.1) */

@@ -160,9 +160,7 @@
 }
 
 .hero-bio p {
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 .hero-links {
@@ -351,9 +349,7 @@
   color: var(--text-secondary);
   font-size: var(--text-base);
   max-width: 64ch;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 /* FILTER BAR */
@@ -520,9 +516,7 @@
   color: var(--text-secondary);
   max-width: 68ch;
   font-size: var(--text-base);
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 .challenge-solution-grid {
@@ -553,9 +547,7 @@
   font-size: var(--text-sm);
   color: var(--text-secondary);
   max-width: 62ch;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 /* PROJECT SKELETON ROWS */
@@ -698,9 +690,7 @@
   font-size: var(--text-sm);
   color: var(--text-secondary);
   max-width: 65ch;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 .journey-stack {
@@ -820,9 +810,7 @@
   color: var(--text-secondary);
   font-size: var(--text-base);
   max-width: 66ch;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 .timeline-highlights {
@@ -837,9 +825,7 @@
 }
 
 .timeline-highlights li {
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 .timeline-skills {
@@ -995,9 +981,7 @@
   margin-top: 0.85rem;
   color: var(--text-secondary);
   max-width: 52ch;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: pretty;
 }
 
 .footer-inline-email {
@@ -1063,21 +1047,40 @@
     padding-inline: 1rem;
   }
 
+  .site-header {
+    height: auto;
+  }
+
   .header-inner {
-    gap: 0.35rem;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .brand-mark {
+    min-height: 42px;
+    padding-block: 0.35rem;
+    gap: 0.4rem;
   }
 
   .brand-domain {
-    font-size: 0.74rem;
+    font-size: 0.78rem;
   }
 
-  .brand-owner,
   .brand-divider {
-    display: none;
+    font-size: 0.75rem;
+  }
+
+  .brand-owner {
+    font-size: 0.82rem;
   }
 
   .site-nav {
-    gap: 0.42rem;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.25rem;
+    border-top: 1px solid var(--border-subtle);
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -1087,7 +1090,9 @@
   }
 
   .site-nav a {
-    font-size: 0.66rem;
+    min-height: 36px;
+    padding-block: 0.25rem;
+    font-size: 0.72rem;
     white-space: nowrap;
   }
 
